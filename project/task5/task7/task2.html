@@ -1,0 +1,40 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add and Delete Tasks</h1>
+    <input type="text" id="taskInput" placeholder="Enter a Task"/>
+    <button id="addTaskButton">Add Task</button>
+    <ul id="taskList"></ul>
+    <script>
+        const button = document.getElementById("addTaskButton");
+        const taskList = document.getElementById("taskList");
+        const taskInput = document.getElementById("taskInput");
+
+        button.addEventListener("click", function() {
+            if (taskInput.value.trim() !== '') {
+                let li = document.createElement("li");
+                li.textContent = taskInput.value;
+                taskList.appendChild(li);
+                taskInput.value = '';
+
+                let deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Delete';
+                li.appendChild(deleteButton);
+
+                deleteButton.addEventListener('click', function() {
+                    li.remove();
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+  if (true) {
+    var a = 10;
+    let b = 20;
+}
+console.log(a);
+console.log(b);
+    </script> -->
+<!-- <script>
+
+    function outerFunction(){
+        let counter =5;
+
+        function innerfunction(){
+            counter++;
+            return counter;
+        }
+        return innerfunction;
+    }
+
+    const incrementCounter =outerFunction();
+
+    console.log(incrementCounter());
+    console.log(incrementCounter());
+    console.log(incrementCounter());
+</script> -->
+<script>
+let object1 ={
+    name:"Dinesh",
+    age:20
+}
+let object2 ={
+    name:"ram",
+    age:23
+}
+object2.__proto__=object1;
+let object3 ={
+    name:"raju",
+    salary:24000,
+   
+}
+object3.__proto__=object2;
+console.log(object3.name);
+console.log(object3.age);
+
+
+
+
+</script>
+
+
+    
+</body>
+</html>
